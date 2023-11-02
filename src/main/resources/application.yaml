@@ -4,17 +4,18 @@ spring:
 
 server:
   port: 8761
+
 eureka:
   instance:
-    appname: eureka-server # clientlar tarafýndan eurekanýn bulunmasý ve kullanýlmasý için oluþturulur
-    hostname: localhost # eureka clientlar tarafýndan eriþim için kullanýlacaktýr
+    appname: eureka-server # clientlar tarafï¿½ndan eurekanï¿½n bulunmasï¿½ ve kullanï¿½lmasï¿½ iï¿½in oluï¿½turulur
+    hostname: eureka-server # eureka clientlar tarafï¿½ndan eriï¿½im iï¿½in kullanï¿½lacaktï¿½r
   client:
-    register-with-eureka: false # Uygulamanýn servis olarak kendisini kaydedip kaydetmemesini belirtir.
-    fetch-registry: false # Uygulamanýn baþlangýçta servislerin registery sini alýp almayacaðýný belirtir.
+    register-with-eureka: false # Uygulamanï¿½n servis olarak kendisini kaydedip kaydetmemesini belirtir.
+    fetch-registry: false # Uygulamanï¿½n baï¿½langï¿½ï¿½ta servislerin registery sini alï¿½p almayacaï¿½ï¿½nï¿½ belirtir.
     #Servislerin registerysi eureka servise kaydolan servislerin listesidir.
-    #Bu uygulama eureka serverdan servislerin registerysini alýrken bu listeyi diðer servisleri bulmak ve iletiþim kurmak için kullanýlýr.
-    # false olarak iþaretendiðinde registery bilgilerini eureka servisten almaz.
-    # Önce eureka çalýþtýrýlýp ardýndan servisleri çalýþtýracaðýmýzdan bunu false yapabiliriz.
+    #Bu uygulama eureka serverdan servislerin registerysini alï¿½rken bu listeyi diï¿½er servisleri bulmak ve iletiï¿½im kurmak iï¿½in kullanï¿½lï¿½r.
+    # false olarak iï¿½aretendiï¿½inde registery bilgilerini eureka servisten almaz.
+    # ï¿½nce eureka ï¿½alï¿½ï¿½tï¿½rï¿½lï¿½p ardï¿½ndan servisleri ï¿½alï¿½ï¿½tï¿½racaï¿½ï¿½mï¿½zdan bunu false yapabiliriz.
     service-url:
-      default-zone : http://${eureka.instance.hostname}:${server.port}/eureka # eureka url belirtilir $ ile yaml içerisindeki propertyler çaðrýlýr.
+      default-zone : http://${eureka.instance.hostname}:${server.port}/eureka # eureka url belirtilir $ ile yaml iï¿½erisindeki propertyler ï¿½aï¿½rï¿½lï¿½r.
 
